@@ -1,0 +1,25 @@
+{
+  "name": "unimed-automation",
+  "version": "1.0.0",
+  "description": "Web automation script for Unimed Nordeste medical plan website",
+  "main": "src/automation.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/automation.js",
+    "test": "node src/automation.js --test",
+    "dev": "node src/automation.js --headed"
+  },
+  "keywords": [
+    "automation",
+    "playwright",
+    "medical"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "playwright": "^1.40.0",
+    "dotenv": "^16.3.1",
+    "winston": "^3.11.0",
+    "date-fns": "^3.0.0"
+  }
+}
