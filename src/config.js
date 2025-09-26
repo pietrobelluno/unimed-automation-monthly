@@ -20,13 +20,14 @@ export const config = {
     screenshotOnError: process.env.SCREENSHOT_ON_ERROR === "true",
   },
   dataFiles: {
-    patientData: process.env.PATIENT_DATA_FILE || "patients_data.json",
+    patientData: process.env.PATIENT_DATA_FILE || "patients_data_26_09.json",
   },
   urls: {
     base: process.env.BASE_URL,
     login: process.env.BASE_URL,
   },
   logLevel: process.env.LOG_LEVEL || "info",
+  emulateDate: process.env.EMULATE_DATE || null, // Format: "YYYY-MM-DD" e.g., "2024-09-19"
 };
 
 export const selectors = {

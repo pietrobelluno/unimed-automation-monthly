@@ -1,19 +1,5 @@
 [
   {
-    "nome": "AGATHA GROSS ANDREIS",
-    "skip": false,
-    "carteirinha": "00410010008490763",
-    "nascimento": "21-05-2020",
-    "cpf": "06566899006",
-    "nomeDaMae": "Simone de Oliveira Gross",
-    "nomeDoTitular": "Francisco Antônio Andreis",
-    "idade": 5,
-    "weekdays": [
-      "wednesday"
-    ],
-    "professional": "flavia manuela boeira"
-  },
-  {
     "nome": "ALEXANDRE POHREN",
     "skip": true,
     "carteirinha": "00410001001251870",
@@ -22,41 +8,24 @@
     "nomeDaMae": "Alexsandra Silva",
     "nomeDoTitular": "Rafael Pohren",
     "idade": 9,
-    "weekdays": [
-      "monday",
-      "tuesday",
-      "friday"
-    ],
-    "professional": "flavia manuela boeira"
-  },
-  {
-    "nome": "ALICE FERRAZ PERONDI",
-    "skip": false,
-    "carteirinha": "00410001001002675",
-    "nascimento": "07-11-2015",
-    "cpf": "05562873044",
-    "nomeDaMae": "JANAINA FREITAS FERRAZ",
-    "nomeDoTitular": "GABRIEL PERONDI",
-    "idade": 9,
-    "weekdays": [
-      "thursday"
+    "monthlyDays": [
+      10,
+      24
     ],
     "professional": "flavia manuela boeira"
   },
   {
     "nome": "ANDRES ISRAEL MOREIRA DA SILVA",
-    "skip": true,
+    "skip": false,
     "carteirinha": "00410001001563693",
     "nascimento": "11-07-2021",
     "cpf": "06787502036",
     "nomeDaMae": null,
     "nomeDoTitular": null,
     "idade": 4,
-    "weekdays": [
-      "monday",
-      "tuesday",
-      "thursday",
-      "friday"
+    "monthlyDays": [
+      22,
+      23
     ],
     "professional": "flavia manuela boeira"
   },
@@ -69,8 +38,9 @@
     "nomeDaMae": "Francieli Briezinski",
     "nomeDoTitular": "Francieli Briezinski",
     "idade": 6,
-    "weekdays": [
-      "monday"
+    "monthlyDays": [
+      16,
+      23
     ],
     "professional": "flavia manuela boeira"
   },
@@ -83,8 +53,10 @@
     "nomeDaMae": null,
     "nomeDoTitular": null,
     "idade": 2,
-    "weekdays": [
-      "thursday"
+    "monthlyDays": [
+      8,
+      15,
+      22
     ],
     "professional": "flavia manuela boeira"
   },
@@ -94,12 +66,14 @@
     "carteirinha": "00410010009720479",
     "nascimento": "29-09-2018",
     "cpf": "06014799044",
-    "nomeDaMae": "RENATA PANISSON",
-    "nomeDoTitular": "DIEGO PANISSON",
+    "nomeDaMae": null,
+    "nomeDoTitular": null,
     "idade": 6,
-    "weekdays": [
-      "tuesday",
-      "thursday"
+    "monthlyDays": [
+      1,
+      8,
+      15,
+      22
     ],
     "professional": "flavia manuela boeira"
   },
@@ -111,10 +85,9 @@
     "cpf": null,
     "nomeDaMae": null,
     "nomeDoTitular": null,
-    "idade": 2,
-    "weekdays": [
-      "monday",
-      "friday"
+    "idade": 3,
+    "monthlyDays": [
+      22
     ],
     "professional": "flavia manuela boeira"
   },
@@ -127,23 +100,10 @@
     "nomeDaMae": "Bruna oberherr",
     "nomeDoTitular": "Bruna oberherr",
     "idade": 5,
-    "weekdays": [
-      "tuesday"
-    ],
-    "professional": "flavia manuela boeira"
-  },
-  {
-    "nome": "ARTHUR SANTANA SILVA",
-    "skip": true,
-    "carteirinha": "00410010009789584",
-    "nascimento": "01-12-2020",
-    "cpf": "06669682093",
-    "nomeDaMae": "Cleia da Silva",
-    "nomeDoTitular": "Joclecio Santana Silva",
-    "idade": 4,
-    "weekdays": [
-      "monday",
-      "tuesday"
+    "monthlyDays": [
+      2,
+      16,
+      23
     ],
     "professional": "flavia manuela boeira"
   },
@@ -156,39 +116,24 @@
     "nomeDaMae": null,
     "nomeDoTitular": null,
     "idade": 2,
-    "weekdays": [
-      "monday"
+    "monthlyDays": [
+      22
     ],
     "professional": "flavia manuela boeira"
   },
   {
-    "nome": "BENICIO KULMAN DOS SANTOS",
+    "nome": "DAVI LUCCA DIAS PEREIRA",
     "skip": false,
-    "carteirinha": "00410010008074913",
-    "nascimento": "23-02-2020",
-    "cpf": "06502619096",
-    "nomeDaMae": "Juliana Medeiros",
-    "nomeDoTitular": "\"Igor Laurindo dos Santos",
-    "idade": 5,
-    "weekdays": [
-      "monday",
-      "tuesday"
-    ],
-    "professional": "flavia manuela boeira"
-  },
-  {
-    "nome": "Bernardo Vieira Alcantara",
-    "skip": true,
-    "carteirinha": "00410001001357333",
-    "nascimento": "19-07-2021",
-    "cpf": null,
-    "nomeDaMae": "Fernanda Vieira",
-    "nomeDoTitular": "Fernanda Vieira",
-    "idade": 4,
-    "weekdays": [
-      "monday",
-      "tuesday",
-      "wednesday"
+    "carteirinha": "00410001001430316",
+    "nascimento": "16-05-2019",
+    "cpf": "05691474090",
+    "nomeDaMae": "Caroline spido dias",
+    "nomeDoTitular": "Davi Lucca dias Pereira",
+    "idade": 6,
+    "monthlyDays": [
+      22,
+      23,
+      24
     ],
     "professional": "flavia manuela boeira"
   },
@@ -196,14 +141,17 @@
     "nome": "DAVI SARTORI COSTA",
     "skip": false,
     "carteirinha": "00410010010100748",
-    "nascimento": "16-05-2019",
+    "nascimento": "17-01-2018",
     "cpf": "06281651022",
     "nomeDaMae": "Vandreia Sartori Costa",
     "nomeDoTitular": "Douglas Jose Costa",
-    "idade": 6,
-    "weekdays": [
-      "monday",
-      "thursday"
+    "idade": 7,
+    "monthlyDays": [
+      2,
+      9,
+      16,
+      22,
+      23
     ],
     "professional": "flavia manuela boeira"
   },
@@ -216,9 +164,12 @@
     "nomeDaMae": "Renata Delezari Oliveira",
     "nomeDoTitular": "Renata Delezari Oliveira",
     "idade": 4,
-    "weekdays": [
-      "monday",
-      "tuesday"
+    "monthlyDays": [
+      5,
+      12,
+      19,
+      23,
+      26
     ],
     "professional": "flavia manuela boeira"
   },
@@ -231,8 +182,18 @@
     "nomeDaMae": "Shirley Torres do Amaral rosa",
     "nomeDoTitular": "Shirley Torres do Amaral rosa",
     "idade": 5,
-    "weekdays": [
-      "monday"
+    "monthlyDays": [
+      1,
+      2,
+      3,
+      8,
+      9,
+      10,
+      16,
+      17,
+      22,
+      23,
+      24
     ],
     "professional": "flavia manuela boeira"
   },
@@ -245,26 +206,12 @@
     "nomeDaMae": null,
     "nomeDoTitular": null,
     "idade": 4,
-    "weekdays": [
-      "tuesday",
-      "wednesday",
-      "thursday"
-    ],
-    "professional": "flavia manuela boeira"
-  },
-  {
-    "nome": "GABRIEL BAREA PEZZI",
-    "skip": false,
-    "carteirinha": "00410012001027894",
-    "nascimento": "01-12-2017",
-    "cpf": "05639019000",
-    "nomeDaMae": "Marcia Cristina Barea",
-    "nomeDoTitular": "Marcia Cristina Barea",
-    "idade": 7,
-    "weekdays": [
-      "monday",
-      "tuesday",
-      "wednesday"
+    "monthlyDays": [
+      1,
+      10,
+      17,
+      22,
+      24
     ],
     "professional": "flavia manuela boeira"
   },
@@ -277,9 +224,15 @@
     "nomeDaMae": "Michele Souza",
     "nomeDoTitular": "Michele Souza",
     "idade": 6,
-    "weekdays": [
-      "monday",
-      "tuesday"
+    "monthlyDays": [
+      2,
+      3,
+      9,
+      10,
+      16,
+      17,
+      23,
+      24
     ],
     "professional": "flavia manuela boeira"
   },
@@ -289,15 +242,16 @@
     "carteirinha": "00410001001522458",
     "nascimento": "17-06-2022",
     "cpf": "06971982002",
-    "nomeDaMae": "ROBERTA RODRIGUES MENEGAT",
-    "nomeDoTitular": "ROBERTA RODRIGUES MENEGAT",
+    "nomeDaMae": "ROBERTA MENEGAT",
+    "nomeDoTitular": "ROBERTA MENEGAT",
     "idade": 3,
-    "weekdays": [
-      "monday",
-      "tuesday",
-      "wednesday",
-      "thursday",
-      "friday"
+    "monthlyDays": [
+      10,
+      22,
+      23,
+      24,
+      25,
+      26
     ],
     "professional": "flavia manuela boeira"
   },
@@ -310,8 +264,8 @@
     "nomeDaMae": "Juliana C. Pandolfi",
     "nomeDoTitular": "Cristian Pandolfi",
     "idade": 7,
-    "weekdays": [
-      "tuesday"
+    "monthlyDays": [
+      23
     ],
     "professional": "flavia manuela boeira"
   },
@@ -324,8 +278,15 @@
     "nomeDaMae": null,
     "nomeDoTitular": null,
     "idade": 3,
-    "weekdays": [
-      "friday"
+    "monthlyDays": [
+      4,
+      5,
+      11,
+      12,
+      18,
+      19,
+      25,
+      26
     ],
     "professional": "flavia manuela boeira"
   },
@@ -338,9 +299,11 @@
     "nomeDaMae": "Sabrina Pastorini Alves",
     "nomeDoTitular": "Sabrina Pastorini Alves",
     "idade": 7,
-    "weekdays": [
-      "monday",
-      "tuesday"
+    "monthlyDays": [
+      3,
+      10,
+      23,
+      24
     ],
     "professional": "flavia manuela boeira"
   },
@@ -353,8 +316,11 @@
     "nomeDaMae": "Viviane Soares",
     "nomeDoTitular": "Viviane Soares",
     "idade": 6,
-    "weekdays": [
-      "tuesday"
+    "monthlyDays": [
+      4,
+      11,
+      25,
+      26
     ],
     "professional": "flavia manuela boeira"
   },
@@ -367,8 +333,15 @@
     "nomeDaMae": "Leticia Miranda",
     "nomeDoTitular": "William Miranda",
     "idade": 8,
-    "weekdays": [
-      "monday"
+    "monthlyDays": [
+      3,
+      5,
+      10,
+      12,
+      17,
+      19,
+      24,
+      26
     ],
     "professional": "flavia manuela boeira"
   },
@@ -381,8 +354,8 @@
     "nomeDaMae": "carolina severo",
     "nomeDoTitular": "jonatan veiga",
     "idade": 5,
-    "weekdays": [
-      "tuesday"
+    "monthlyDays": [
+      23
     ],
     "professional": "flavia manuela boeira"
   },
@@ -395,8 +368,8 @@
     "nomeDaMae": "JOELMA DA SILVA FONSECA",
     "nomeDoTitular": "JOELMA DA SILVA FONSECA",
     "idade": 6,
-    "weekdays": [
-      "tuesday"
+    "monthlyDays": [
+      23
     ],
     "professional": "flavia manuela boeira"
   },
@@ -409,8 +382,10 @@
     "nomeDaMae": "Denise Santos",
     "nomeDoTitular": "Bruno Dalzotto",
     "idade": 5,
-    "weekdays": [
-      "monday"
+    "monthlyDays": [
+      2,
+      9,
+      16
     ],
     "professional": "flavia manuela boeira"
   },
@@ -423,9 +398,10 @@
     "nomeDaMae": null,
     "nomeDoTitular": null,
     "idade": 3,
-    "weekdays": [
-      "tuesday",
-      "thursday"
+    "monthlyDays": [
+      22,
+      23,
+      24
     ],
     "professional": "flavia manuela boeira"
   },
@@ -435,26 +411,35 @@
     "carteirinha": "00410001001090396",
     "nascimento": "24-12-2017",
     "cpf": "05662963061",
-    "nomeDaMae": "BRUNA RAQUEL RIBEIRO REIS",
-    "nomeDoTitular": "BRUNA RAQUEL RIBEIRO REIS",
+    "nomeDaMae": "BRUNA RAQUEL REIS",
+    "nomeDoTitular": "BRUNA RAQUEL REIS",
     "idade": 7,
-    "weekdays": [
-      "tuesday"
+    "monthlyDays": [
+      2,
+      9,
+      16,
+      23
     ],
     "professional": "flavia manuela boeira"
   },
   {
     "nome": "HENRIQUE ANDRADE RUZZARIN",
-    "skip": false,
+    "skip": true,
     "carteirinha": "00410012000997350",
-    "nascimento": "26-08-2015",
+    "nascimento": "27-01-2021",
     "cpf": "05875256060",
-    "nomeDaMae": "DAIANa ANDRADE RUZZARIN",
+    "nomeDaMae": "DAIANA RUZZARIN",
     "nomeDoTitular": "EDUARDO RUZZARIN",
-    "idade": 9,
-    "weekdays": [
-      "monday",
-      "thursday"
+    "idade": 4,
+    "monthlyDays": [
+      2,
+      4,
+      9,
+      11,
+      16,
+      18,
+      23,
+      25
     ],
     "professional": "flavia manuela boeira"
   },
@@ -462,28 +447,14 @@
     "nome": "HENRIQUE CARO DE LIMA",
     "skip": true,
     "carteirinha": "01002700006000752",
-    "nascimento": "27-01-2021",
+    "nascimento": "03-10-2014",
     "cpf": "06701618022",
     "nomeDaMae": "Ioshada Caro",
     "nomeDoTitular": "Tiago Souza Lima",
-    "idade": 4,
-    "weekdays": [
-      "monday",
-      "wednesday"
-    ],
-    "professional": "flavia manuela boeira"
-  },
-  {
-    "nome": "Henrique Santos Chiossi",
-    "skip": true,
-    "carteirinha": "00410001000841754",
-    "nascimento": "03-10-2014",
-    "cpf": "04985830070",
-    "nomeDaMae": null,
-    "nomeDoTitular": null,
     "idade": 10,
-    "weekdays": [
-      "wednesday"
+    "monthlyDays": [
+      22,
+      24
     ],
     "professional": "flavia manuela boeira"
   },
@@ -491,13 +462,15 @@
     "nome": "ISABELA SCAPINELLI SARTOR",
     "skip": true,
     "carteirinha": "00410001001376494",
-    "nascimento": "04-10-2021",
+    "nascimento": "03-07-2021",
     "cpf": null,
     "nomeDaMae": null,
     "nomeDoTitular": null,
-    "idade": 3,
-    "weekdays": [
-      "monday"
+    "idade": 4,
+    "monthlyDays": [
+      10,
+      17,
+      24
     ],
     "professional": "flavia manuela boeira"
   },
@@ -505,43 +478,65 @@
     "nome": "ISIS MULLER CONCEICAO",
     "skip": true,
     "carteirinha": "00410010009645434",
-    "nascimento": "03-07-2021",
+    "nascimento": "10-11-2021",
     "cpf": null,
     "nomeDaMae": null,
     "nomeDoTitular": "WELINGTON CONCEIÇÃO",
-    "idade": 4,
-    "weekdays": [
-      "thursday"
+    "idade": 3,
+    "monthlyDays": [
+      10,
+      17,
+      24
     ],
     "professional": "flavia manuela boeira"
   },
   {
     "nome": "ISMAEL ZATTI RAMOS JUNIOR",
-    "skip": true,
+    "skip": false,
     "carteirinha": "00410001001539440",
-    "nascimento": "10-11-2021",
+    "nascimento": "25-02-2016",
     "cpf": "06854272009",
-    "nomeDaMae": "Silmona Gomes della Valle Soares",
+    "nomeDaMae": "Silmona Soares",
     "nomeDoTitular": "Ismael Zatti Ramos",
-    "idade": 3,
-    "weekdays": [
-      "monday",
-      "wednesday"
+    "idade": 9,
+    "monthlyDays": [
+      4,
+      10,
+      11,
+      17,
+      18,
+      24,
+      25
     ],
     "professional": "flavia manuela boeira"
   },
   {
     "nome": "JOAO PEDRO PALLA",
-    "skip": false,
+    "skip": true,
     "carteirinha": "00410001001010112",
-    "nascimento": "25-02-2016",
+    "nascimento": "26-11-2021",
     "cpf": "05602429050",
     "nomeDaMae": "ROSANE PALLA",
     "nomeDoTitular": "ROSANE PALLA",
-    "idade": 9,
-    "weekdays": [
-      "monday",
-      "tuesday"
+    "idade": 3,
+    "monthlyDays": [
+      22,
+      23
+    ],
+    "professional": "flavia manuela boeira"
+  },
+  {
+    "nome": "JOAO VICENTE FERREIRA HENZEL",
+    "skip": false,
+    "carteirinha": "00410010008722389",
+    "nascimento": "20-11-2018",
+    "cpf": "06863606054",
+    "nomeDaMae": null,
+    "nomeDoTitular": null,
+    "idade": 6,
+    "monthlyDays": [
+      22,
+      24
     ],
     "professional": "flavia manuela boeira"
   },
@@ -549,102 +544,65 @@
     "nome": "JOAQUIM DO NASCIMENTO MORAES",
     "skip": false,
     "carteirinha": "00410001001622789",
-    "nascimento": "20-11-2018",
+    "nascimento": "05-07-2019",
     "cpf": "06075721088",
     "nomeDaMae": "Sandra Nascimento",
     "nomeDoTitular": "Sandra Nascimento",
     "idade": 6,
-    "weekdays": [
-      "wednesday",
-      "thursday",
-      "friday"
+    "monthlyDays": [
+      3,
+      4,
+      10,
+      11,
+      17,
+      18,
+      24,
+      25
     ],
     "professional": "flavia manuela boeira"
   },
   {
     "nome": "JOSE ANTONIO DOS REIS BACKES",
-    "skip": false,
+    "skip": true,
     "carteirinha": "00410001001169839",
-    "nascimento": "05-07-2019",
+    "nascimento": "15-09-2020",
     "cpf": "06325439066",
     "nomeDaMae": "Daniela Silva",
     "nomeDoTitular": "Daniela Silva",
-    "idade": 6,
-    "weekdays": [
-      "monday",
-      "tuesday"
+    "idade": 5,
+    "monthlyDays": [
+      26
     ],
     "professional": "flavia manuela boeira"
   },
   {
     "nome": "JULIA ALMERON DOS SANTOS",
-    "skip": true,
+    "skip": false,
     "carteirinha": "00410001001568679",
-    "nascimento": "15-09-2020",
+    "nascimento": "11-07-2012",
     "cpf": null,
     "nomeDaMae": null,
     "nomeDoTitular": null,
-    "idade": 4,
-    "weekdays": [
-      "tuesday",
-      "wednesday"
+    "idade": 13,
+    "monthlyDays": [
+      16,
+      17,
+      23,
+      24
     ],
     "professional": "flavia manuela boeira"
   },
   {
     "nome": "JULIA DE SOUSA CIENA",
-    "skip": false,
+    "skip": true,
     "carteirinha": "00410010005662199",
-    "nascimento": "11-07-2012",
+    "nascimento": "06-01-2023",
     "cpf": "04376047058",
     "nomeDaMae": "LENICE SOUSA",
     "nomeDoTitular": "MARCOS CIENA",
-    "idade": 13,
-    "weekdays": [
-      "monday"
-    ],
-    "professional": "flavia manuela boeira"
-  },
-  {
-    "nome": "LAURA ANDREAZZA BASSANI",
-    "skip": true,
-    "carteirinha": "00410010009708487",
-    "nascimento": "06-01-2023",
-    "cpf": "07062668036",
-    "nomeDaMae": "Karen Cristina Andreazza Bassani",
-    "nomeDoTitular": "Karen Cristina Andreazza Bassani",
     "idade": 2,
-    "weekdays": [
-      "thursday"
-    ],
-    "professional": "flavia manuela boeira"
-  },
-  {
-    "nome": "LAURA ANTONELA LAXES GRACIOLE",
-    "skip": true,
-    "carteirinha": "09711900042040628",
-    "nascimento": "27-02-2021",
-    "cpf": "06717176008",
-    "nomeDaMae": "Leticia Laxes",
-    "nomeDoTitular": "Leticia Laxes",
-    "idade": 4,
-    "weekdays": [
-      "monday",
-      "tuesday"
-    ],
-    "professional": "flavia manuela boeira"
-  },
-  {
-    "nome": "LAVINIA ELOA MARTININGHI SANTOS",
-    "skip": true,
-    "carteirinha": "00410001001658139",
-    "nascimento": "19-12-2020",
-    "cpf": "06681205097",
-    "nomeDaMae": "Patrícia de Oliveira Martininghi",
-    "nomeDoTitular": "Lavínia Eloá Martininghi",
-    "idade": 4,
-    "weekdays": [
-      "tuesday"
+    "monthlyDays": [
+      22
     ],
     "professional": "flavia manuela boeira"
   },
@@ -652,43 +610,47 @@
     "nome": "LIVIA FRAPPORTI SOARES",
     "skip": false,
     "carteirinha": "00291613942000289",
-    "nascimento": "23-10-2018",
+    "nascimento": "17-02-2019",
     "cpf": "06043767074",
     "nomeDaMae": "Daniane Sezotto Frapporti",
     "nomeDoTitular": "Jean Soares Correa dos Santos",
     "idade": 6,
-    "weekdays": [
-      "thursday"
+    "monthlyDays": [
+      5,
+      12,
+      19
     ],
     "professional": "flavia manuela boeira"
   },
   {
     "nome": "LORENZO FRANCISCO PEREIRA DA SILVA",
-    "skip": false,
+    "skip": true,
     "carteirinha": "00410001001552047",
-    "nascimento": "17-02-2019",
+    "nascimento": "10-03-2021",
     "cpf": "06176725046",
     "nomeDaMae": "PATRICIA ALVES PEREIRA DA SILVA",
     "nomeDoTitular": "FRANCISCO CARLOS DA SILVA",
-    "idade": 6,
-    "weekdays": [
-      "tuesday",
-      "thursday"
+    "idade": 4,
+    "monthlyDays": [
+      23,
+      25
     ],
     "professional": "flavia manuela boeira"
   },
   {
     "nome": "LOUISE OLIVEIRA DOS SANTOS",
-    "skip": true,
-    "carteirinha": "00410010010285390",
-    "nascimento": "10-03-2021",
+    "skip": false,
+    "carteirinha": "00410010010664269",
+    "nascimento": "05-05-2019",
     "cpf": "06723297008",
     "nomeDaMae": null,
     "nomeDoTitular": null,
-    "idade": 4,
-    "weekdays": [
-      "monday",
-      "wednesday"
+    "idade": 6,
+    "monthlyDays": [
+      1,
+      2,
+      22,
+      23
     ],
     "professional": "flavia manuela boeira"
   },
@@ -701,25 +663,11 @@
     "nomeDaMae": "JESSICA ROGEANA DA SILVA OLIVEIRA",
     "nomeDoTitular": "BRUNO ARRUDA OLIVEIRA",
     "idade": 6,
-    "weekdays": [
-      "monday",
-      "tuesday",
-      "thursday",
-      "friday"
-    ],
-    "professional": "flavia manuela boeira"
-  },
-  {
-    "nome": "LUCAS LIZOT",
-    "skip": false,
-    "carteirinha": "00410010010893101",
-    "nascimento": "24-03-2018",
-    "cpf": "05790261086",
-    "nomeDaMae": "Aline Lizot",
-    "nomeDoTitular": "Aline Lizot",
-    "idade": 7,
-    "weekdays": [
-      "tuesday"
+    "monthlyDays": [
+      22,
+      24,
+      25,
+      26
     ],
     "professional": "flavia manuela boeira"
   },
@@ -732,8 +680,9 @@
     "nomeDaMae": "VIVIANE PEDROTI",
     "nomeDoTitular": "VIVIANE PEDROTI",
     "idade": 7,
-    "weekdays": [
-      "tuesday"
+    "monthlyDays": [
+      2,
+      23
     ],
     "professional": "flavia manuela boeira"
   },
@@ -744,26 +693,10 @@
     "nascimento": "13-01-2019",
     "cpf": "06131398011",
     "nomeDaMae": "Michele Souza",
-    "nomeDoTitular": "Luiz Karasek",
+    "nomeDoTitular": "Luiz Souza",
     "idade": 6,
-    "weekdays": [
-      "monday",
-      "wednesday"
-    ],
-    "professional": "flavia manuela boeira"
-  },
-  {
-    "nome": "MAITE BESUTTI MACIEL",
-    "skip": true,
-    "carteirinha": "00410010010272018",
-    "nascimento": "25-06-2021",
-    "cpf": "06777936808",
-    "nomeDaMae": "Lais Besutti",
-    "nomeDoTitular": "Lais Besutti",
-    "idade": 4,
-    "weekdays": [
-      "monday",
-      "tuesday"
+    "monthlyDays": [
+      22
     ],
     "professional": "flavia manuela boeira"
   },
@@ -776,52 +709,44 @@
     "nomeDaMae": null,
     "nomeDoTitular": null,
     "idade": 6,
-    "weekdays": [
-      "thursday",
-      "friday"
+    "monthlyDays": [
+      2,
+      9,
+      16,
+      18,
+      23,
+      25,
+      26
     ],
     "professional": "flavia manuela boeira"
   },
   {
     "nome": "MARIA LUISA MARI MAGALHAES",
-    "skip": false,
+    "skip": true,
     "carteirinha": "00410001001223736",
-    "nascimento": "21-02-2020",
+    "nascimento": "03-03-2022",
     "cpf": "06504020060",
     "nomeDaMae": "Greice Mari",
     "nomeDoTitular": "Marcelo Magalhaes",
-    "idade": 5,
-    "weekdays": [
-      "friday"
+    "idade": 3,
+    "monthlyDays": [
+      26
     ],
     "professional": "flavia manuela boeira"
   },
   {
     "nome": "MARTINA SCAPINELI RODRIGUES",
-    "skip": true,
+    "skip": false,
     "carteirinha": "00410010008222190",
-    "nascimento": "30-03-2021",
+    "nascimento": "21-02-2020",
     "cpf": null,
     "nomeDaMae": null,
     "nomeDoTitular": null,
-    "idade": 4,
-    "weekdays": [
-      "wednesday"
-    ],
-    "professional": "flavia manuela boeira"
-  },
-  {
-    "nome": "MATHEUS KELLERMANN MORONI",
-    "skip": true,
-    "carteirinha": "00410010010461686",
-    "nascimento": "16-11-2022",
-    "cpf": null,
-    "nomeDaMae": null,
-    "nomeDoTitular": null,
-    "idade": 2,
-    "weekdays": [
-      "monday",
-      "wednesday"
+    "idade": 5,
+    "monthlyDays": [
+      2,
+      16,
+      23
     ],
     "professional": "flavia manuela boeira"
   },
@@ -829,13 +754,16 @@
     "nome": "MATTEO TRAMONTIN COMERLATTO",
     "skip": true,
     "carteirinha": "00410010009862478",
-    "nascimento": "02-12-2023",
+    "nascimento": "16-11-2022",
     "cpf": null,
     "nomeDaMae": null,
     "nomeDoTitular": null,
-    "idade": 1,
-    "weekdays": [
-      "tuesday"
+    "idade": 2,
+    "monthlyDays": [
+      2,
+      16,
+      23,
+      26
     ],
     "professional": "flavia manuela boeira"
   },
@@ -843,41 +771,29 @@
     "nome": "MIGUEL ANTONIO PASINATO",
     "skip": true,
     "carteirinha": "00410010009499586",
-    "nascimento": "18-03-2021",
+    "nascimento": "02-12-2023",
     "cpf": null,
     "nomeDaMae": null,
     "nomeDoTitular": null,
-    "idade": 4,
-    "weekdays": [
-      "friday"
-    ],
-    "professional": "flavia manuela boeira"
-  },
-  {
-    "nome": "MIGUEL AUGUSTO M MACIEL",
-    "skip": false,
-    "carteirinha": "00410010010393265",
-    "nascimento": "06-01-2018",
-    "cpf": "05674253048",
-    "nomeDaMae": "MICHELE MULLER",
-    "nomeDoTitular": "MICHELE MULLER",
-    "idade": 7,
-    "weekdays": [
-      "monday"
+    "idade": 1,
+    "monthlyDays": [
+      12,
+      19
     ],
     "professional": "flavia manuela boeira"
   },
   {
     "nome": "MURILLO DA SILVA BECKER",
-    "skip": false,
+    "skip": true,
     "carteirinha": "00410001001483240",
-    "nascimento": "29-09-2016",
+    "nascimento": "17-06-2022",
     "cpf": "05221761009",
     "nomeDaMae": "Katia Aparecida da Silva Becker",
     "nomeDoTitular": "Katia Aparecida da Silva Becker",
-    "idade": 8,
-    "weekdays": [
-      "wednesday"
+    "idade": 3,
+    "monthlyDays": [
+      17,
+      24
     ],
     "professional": "flavia manuela boeira"
   },
@@ -885,14 +801,24 @@
     "nome": "NOAH PINHEIRO ALANO",
     "skip": false,
     "carteirinha": "00410001001631079",
-    "nascimento": "17-02-2020",
+    "nascimento": "29-09-2016",
     "cpf": "06500904036",
     "nomeDaMae": "Sabrina da Silva",
     "nomeDoTitular": "Sabrina da Silva",
-    "idade": 5,
-    "weekdays": [
-      "monday",
-      "tuesday"
+    "idade": 8,
+    "monthlyDays": [
+      3,
+      4,
+      5,
+      10,
+      11,
+      12,
+      17,
+      18,
+      19,
+      24,
+      25,
+      26
     ],
     "professional": "flavia manuela boeira"
   },
@@ -900,27 +826,28 @@
     "nome": "PEDRO CRUZ CAMPELO",
     "skip": false,
     "carteirinha": "00410001001628990",
-    "nascimento": "12-05-2019",
+    "nascimento": "17-02-2020",
     "cpf": "10539250341",
     "nomeDaMae": "Maria de Lourdes Martins Cruz Campelo",
     "nomeDoTitular": "PEDRO CRUZ CAMPELO",
-    "idade": 6,
-    "weekdays": [
-      "tuesday"
+    "idade": 5,
+    "monthlyDays": [
+      23
     ],
     "professional": "flavia manuela boeira"
   },
   {
     "nome": "PIETRO JUNIOR ENNS MARTINS",
     "skip": false,
-    "carteirinha": "00410010010599360",
+    "carteirinha": "00410010010879168",
     "nascimento": "11-06-2020",
     "cpf": "06579750014",
     "nomeDaMae": "Salete Martins",
     "nomeDoTitular": "Michele Rodrigues",
     "idade": 5,
-    "weekdays": [
-      "tuesday"
+    "monthlyDays": [
+      16,
+      23
     ],
     "professional": "flavia manuela boeira"
   },
@@ -928,85 +855,13 @@
     "nome": "RAFAELA ROMIO KELLERMANN",
     "skip": false,
     "carteirinha": "00410010007227430",
-    "nascimento": "22-10-2018",
+    "nascimento": "11-06-2020",
     "cpf": "06041826006",
     "nomeDaMae": "Cristiane Borsoi Romio",
     "nomeDoTitular": "Cristiane Borsoi Romio",
-    "idade": 6,
-    "weekdays": [
-      "wednesday"
-    ],
-    "professional": "flavia manuela boeira"
-  },
-  {
-    "nome": "RAVI BERNARDO VANIN",
-    "skip": true,
-    "carteirinha": "00410010010712123",
-    "nascimento": "28-05-2021",
-    "cpf": null,
-    "nomeDaMae": null,
-    "nomeDoTitular": null,
-    "idade": 4,
-    "weekdays": [
-      "tuesday"
-    ],
-    "professional": "flavia manuela boeira"
-  },
-  {
-    "nome": "SAMUEL DA COSTA FERNANDES",
-    "skip": false,
-    "carteirinha": "00410010007594654",
-    "nascimento": "27-05-2017",
-    "cpf": "05448031080",
-    "nomeDaMae": "Tatiane Da Costa Fernandes",
-    "nomeDoTitular": "Tatiane Da Costa Fernandes",
-    "idade": 8,
-    "weekdays": [
-      "wednesday",
-      "friday"
-    ],
-    "professional": "flavia manuela boeira"
-  },
-  {
-    "nome": "TEODORO CORDOVA ZANROSSO",
-    "skip": false,
-    "carteirinha": "00410010008227493",
-    "nascimento": "16-07-2018",
-    "cpf": "05929243000",
-    "nomeDaMae": "Patricia da Silva Cordova",
-    "nomeDoTitular": "Gabriel Martini Zanrosso",
-    "idade": 7,
-    "weekdays": [
-      "thursday",
-      "friday"
-    ],
-    "professional": "flavia manuela boeira"
-  },
-  {
-    "nome": "THEO BRINKER TOLOTTI",
-    "skip": false,
-    "carteirinha": "00410010008398166",
-    "nascimento": "15-11-2015",
-    "cpf": "05101843083",
-    "nomeDaMae": "Priscila Brinker",
-    "nomeDoTitular": "Rodrigo Tolotti",
-    "idade": 9,
-    "weekdays": [
-      "friday"
-    ],
-    "professional": "flavia manuela boeira"
-  },
-  {
-    "nome": "THEO LIMA QUINTON E SOUZA",
-    "skip": true,
-    "carteirinha": "09711100016069338",
-    "nascimento": "17-10-2019",
-    "cpf": null,
-    "nomeDaMae": null,
-    "nomeDoTitular": null,
     "idade": 5,
-    "weekdays": [
-      "tuesday"
+    "monthlyDays": [
+      24
     ],
     "professional": "flavia manuela boeira"
   },
@@ -1019,23 +874,26 @@
     "nomeDaMae": "FRANCIELE RECH FABRO",
     "nomeDoTitular": "FRANCIELE RECH FABRO",
     "idade": 5,
-    "weekdays": [
-      "tuesday",
-      "wednesday"
+    "monthlyDays": [
+      15,
+      23
     ],
     "professional": "flavia manuela boeira"
   },
   {
     "nome": "THOMAS DONADELLO PRIGOL",
-    "skip": true,
+    "skip": false,
     "carteirinha": "08650004074812105",
-    "nascimento": "30-01-2019",
+    "nascimento": "08-08-2020",
     "cpf": "06150135039",
     "nomeDaMae": null,
     "nomeDoTitular": null,
-    "idade": 6,
-    "weekdays": [
-      "tuesday"
+    "idade": 5,
+    "monthlyDays": [
+      4,
+      11,
+      18,
+      25
     ],
     "professional": "flavia manuela boeira"
   },
@@ -1043,13 +901,13 @@
     "nome": "VALENTIM BOHMECKE SILVEIRA",
     "skip": true,
     "carteirinha": "00410010010273782",
-    "nascimento": "20-08-2020",
+    "nascimento": "30-01-2019",
     "cpf": "06616912094",
-    "nomeDaMae": null,
-    "nomeDoTitular": null,
-    "idade": 4,
-    "weekdays": [
-      "monday"
+    "nomeDaMae": "Carolayne centurião bohmecke",
+    "nomeDoTitular": "Anderson Luis silveira dias",
+    "idade": 6,
+    "monthlyDays": [
+      22
     ],
     "professional": "flavia manuela boeira"
   },
@@ -1062,36 +920,8 @@
     "nomeDaMae": "Aline Peretti Farina",
     "nomeDoTitular": "Gustavo Chiarani",
     "idade": 12,
-    "weekdays": [
-      "monday"
-    ],
-    "professional": "flavia manuela boeira"
-  },
-  {
-    "nome": "VICENTE RODRIGUES FRIZZO",
-    "skip": true,
-    "carteirinha": "00410001001622967",
-    "nascimento": "30-10-2021",
-    "cpf": "06847396075",
-    "nomeDaMae": "Maiane Rodrigues",
-    "nomeDoTitular": "Rafael Frizzo",
-    "idade": 3,
-    "weekdays": [
-      "wednesday"
-    ],
-    "professional": "flavia manuela boeira"
-  },
-  {
-    "nome": "Vicente Sartori Costa",
-    "skip": true,
-    "carteirinha": "00410010010100764",
-    "nascimento": "07-09-2022",
-    "cpf": "07009220085",
-    "nomeDaMae": "Vandreia Sartori Costa",
-    "nomeDoTitular": "Douglas José Costa",
-    "idade": 2,
-    "weekdays": [
-      "tuesday"
+    "monthlyDays": [
+      22
     ],
     "professional": "flavia manuela boeira"
   },
@@ -1104,22 +934,8 @@
     "nomeDaMae": "Keli Spindola Macedo",
     "nomeDoTitular": "Keli Spindola Macedo",
     "idade": 5,
-    "weekdays": [
-      "wednesday"
-    ],
-    "professional": "flavia manuela boeira"
-  },
-  {
-    "nome": "Vitor Catusso da Silva",
-    "skip": false,
-    "carteirinha": "00410010009459134",
-    "nascimento": "16-12-2019",
-    "cpf": "06449101008",
-    "nomeDaMae": "Vanessa Tatiane Catusso",
-    "nomeDoTitular": "Vanessa Tatiane Catusso",
-    "idade": 5,
-    "weekdays": [
-      "tuesday"
+    "monthlyDays": [
+      24
     ],
     "professional": "flavia manuela boeira"
   },
@@ -1127,26 +943,14 @@
     "nome": "YASMIM CAPELINI DA ROCHA",
     "skip": false,
     "carteirinha": "00410001001350134",
-    "nascimento": "26-06-2020",
+    "nascimento": "26/06/2020",
     "cpf": "06589132046",
     "nomeDaMae": "Francine yasmim capelini da Rocha",
     "nomeDoTitular": "Francine yasmim capelini da Rocha",
     "idade": 5,
-    "weekdays": [
-      "monday"
+    "monthlyDays": [
+      22
     ],
-    "professional": "flavia manuela boeira"
-  },
-  {
-    "nome": "YASMIN BRANDO DE ABREU",
-    "skip": false,
-    "carteirinha": "00410010010797404",
-    "nascimento": "14-10-2012",
-    "cpf": "05127060000",
-    "nomeDaMae": "Pamela Brando",
-    "nomeDoTitular": "Pamela Brando",
-    "idade": 12,
-    "weekdays": ["monday", "tuesday"],
     "professional": "flavia manuela boeira"
   },
   {
@@ -1158,9 +962,9 @@
     "nomeDaMae": "Ivone Maia",
     "nomeDoTitular": "Ivone Maia",
     "idade": 3,
-    "weekdays": [
-      "tuesday",
-      "wednesday"
+    "monthlyDays": [
+      9,
+      24
     ],
     "professional": "flavia manuela boeira"
   }

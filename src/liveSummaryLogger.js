@@ -65,16 +65,16 @@ _Loading patient list..._
   setPatientList(patients) {
     this.remaining = patients.map(p => ({
       name: p.nome,
-      weekdays: p.weekdays || [],
+      monthlyDays: p.monthlyDays || [],
       skip: p.skip || false
     }));
     this.updateSummary();
   }
   
-  startPatient(patient, weekday) {
+  startPatient(patient, monthlyDay) {
     this.currentPatient = {
       name: patient.nome,
-      weekday: weekday,
+      monthlyDay: monthlyDay,
       startTime: new Date(),
       skip: patient.skip || false,
       authQuantities: null
@@ -122,7 +122,7 @@ _Loading patient list..._
     // Remove from remaining
     this.remaining = this.remaining.filter(p => 
       !(p.name === this.currentPatient.name && 
-        (!this.currentPatient.weekday || p.weekdays.includes(this.currentPatient.weekday)))
+        (!this.currentPatient.monthlyDay || p.monthlyDays.includes(this.currentPatient.monthlyDay)))
     );
     
     this.currentPatient = null;
@@ -130,10 +130,10 @@ _Loading patient list..._
     this.updateSummary();
   }
   
-  skipPatient(patient, weekday, reason) {
+  skipPatient(patient, monthlyDay, reason) {
     const result = {
       name: patient.nome,
-      weekday: weekday,
+      monthlyDay: monthlyDay,
       reason: reason,
       skipTime: new Date()
     };
@@ -142,7 +142,7 @@ _Loading patient list..._
     
     // Remove from remaining
     this.remaining = this.remaining.filter(p => 
-      !(p.name === patient.nome && p.weekdays.includes(weekday))
+      !(p.name === patient.nome && p.monthlyDays.includes(monthlyDay))
     );
     
     this.updateSummary();
@@ -157,7 +157,7 @@ _Loading patient list..._
     let currentStatusText = '✅ **Idle - Waiting for next patient**';
     if (this.currentPatient) {
       const skipNote = this.currentPatient.skip ? ' (skip mode)' : '';
-      currentStatusText = `🔄 **Currently Processing**: ${this.currentPatient.name} - ${this.currentPatient.weekday}${skipNote}\n`;
+      currentStatusText = `🔄 **Currently Processing**: ${this.currentPatient.name} - Day ${this.currentPatient.monthlyDay}${skipNote}\n`;
       currentStatusText += `   Step ${this.currentStep}/${this.totalSteps}`;
       if (this.currentPatient.lastStep) {
         currentStatusText += ` - ${this.currentPatient.lastStep}`;
@@ -187,7 +187,7 @@ _Loading patient list..._
     
     // Calculate total procedures
     const totalProcedures = this.completed.length + this.failed.length + 
-                          this.skipped.length + this.remaining.reduce((sum, p) => sum + p.weekdays.length, 0);
+                          this.skipped.length + this.remaining.reduce((sum, p) => sum + p.monthlyDays.length, 0);
     
     let content = `# Automation Live Summary
 Started: ${this.startTime.toLocaleString()}
@@ -202,7 +202,7 @@ ${currentStatusText}
 - Completed: ${this.completed.length} ✅
 - Failed: ${this.failed.length} ❌
 - Skipped: ${this.skipped.length} ⏭️
-- Remaining: ${this.remaining.reduce((sum, p) => sum + p.weekdays.length, 0)} ⏳
+- Remaining: ${this.remaining.reduce((sum, p) => sum + p.monthlyDays.length, 0)} ⏳
 
 ## Completed Patients
 `;
@@ -210,7 +210,7 @@ ${currentStatusText}
     if (this.completed.length > 0) {
       this.completed.forEach(p => {
         const duration = Math.round((p.endTime - p.startTime) / 1000);
-        content += `✅ **${p.name}** - ${p.weekday}\n`;
+        content += `✅ **${p.name}** - Day ${p.monthlyDay}\n`;
         content += `   • Steps: ${p.completedSteps}/${this.totalSteps}`;
         
         if (p.registrationNumber) {
@@ -247,7 +247,7 @@ ${currentStatusText}
     content += '\n## Failed Patients\n';
     if (this.failed.length > 0) {
       this.failed.forEach(p => {
-        content += `❌ **${p.name}** - ${p.weekday} - Failed at Step ${p.completedSteps}`;
+        content += `❌ **${p.name}** - Day ${p.monthlyDay} - Failed at Step ${p.completedSteps}`;
         if (p.lastStep) {
           content += `: ${p.lastStep}`;
         }
@@ -263,7 +263,7 @@ ${currentStatusText}
     content += '\n## Skipped Patients\n';
     if (this.skipped.length > 0) {
       this.skipped.forEach(p => {
-        content += `⏭️ **${p.name}** - ${p.weekday} - Reason: ${p.reason}\n`;
+        content += `⏭️ **${p.name}** - Day ${p.monthlyDay} - Reason: ${p.reason}\n`;
       });
     } else {
       content += '_None yet_\n';
@@ -271,19 +271,19 @@ ${currentStatusText}
     
     content += '\n## Currently in Queue\n';
     if (this.remaining.length > 0) {
-      // Group by patient and show weekdays
+      // Group by patient and show monthly days
       const grouped = {};
       this.remaining.forEach(p => {
         if (!grouped[p.name]) {
-          grouped[p.name] = { weekdays: [], skip: p.skip };
+          grouped[p.name] = { monthlyDays: [], skip: p.skip };
         }
-        grouped[p.name].weekdays.push(...p.weekdays);
+        grouped[p.name].monthlyDays.push(...p.monthlyDays);
       });
       
       Object.entries(grouped).forEach(([name, data]) => {
         const skipNote = data.skip ? ' [SKIP]' : '';
-        const weekdaysStr = [...new Set(data.weekdays)].join(', ');
-        content += `⏳ **${name}**${skipNote} - ${weekdaysStr}\n`;
+        const monthlyDaysStr = [...new Set(data.monthlyDays)].sort((a, b) => a - b).map(d => `Day ${d}`).join(', ');
+        content += `⏳ **${name}**${skipNote} - ${monthlyDaysStr}\n`;
       });
     } else {
       content += '_Queue empty_\n';

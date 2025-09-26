@@ -1,103 +1,83 @@
-import { startOfWeek, subWeeks, addDays, format } from 'date-fns';
+import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import { logger } from './logger.js';
 
-// Map weekday names to numbers (0 = Sunday, 1 = Monday, etc.)
-const weekdayMap = {
-  'sunday': 0,
-  'monday': 1,
-  'tuesday': 2,
-  'wednesday': 3,
-  'thursday': 4,
-  'friday': 5,
-  'saturday': 6,
-  'domingo': 0,
-  'segunda': 1,
-  'terça': 2,
-  'quarta': 3,
-  'quinta': 4,
-  'sexta': 5,
-  'sábado': 6
-};
-
-export function getCurrentWeekDate(weekdayName) {
-  const targetDay = weekdayMap[weekdayName.toLowerCase()];
-  if (targetDay === undefined) {
-    logger.error(`Invalid weekday: ${weekdayName}`);
-    throw new Error(`Invalid weekday: ${weekdayName}`);
+export function getMonthlyDate(dayNumber, emulateDate = null) {
+  if (dayNumber < 1 || dayNumber > 31) {
+    logger.error(`Invalid day number: ${dayNumber}`);
+    throw new Error(`Invalid day number: ${dayNumber}`);
   }
 
-  const today = new Date();
-  const currentDay = today.getDay();
-  
-  // Get the start of the current week (Monday)
-  // When running on Sunday, this gives us the Monday of the week that just ended
-  const monday = new Date(today);
-  const daysFromMonday = currentDay === 0 ? 6 : currentDay - 1; // Sunday is 0, make it 6
-  monday.setDate(today.getDate() - daysFromMonday);
-  
-  // Calculate the target date in the current week
-  const targetDate = new Date(monday);
-  targetDate.setDate(monday.getDate() + (targetDay === 0 ? 6 : targetDay - 1));
-  
+  // Use emulated date if provided, otherwise use current date
+  let today = new Date();
+  if (emulateDate) {
+    // Parse emulateDate string (format: "YYYY-MM-DD")
+    const [year, month, day] = emulateDate.split('-').map(num => parseInt(num));
+    today = new Date(year, month - 1, day); // month is 0-indexed
+    logger.info(`Using emulated date: ${format(today, 'dd/MM/yyyy')}`);
+  }
+
+  const currentYear = today.getFullYear();
+  const currentMonth = today.getMonth(); // 0-indexed
+
+  // Create the target date with the specified day number in the current month
+  const targetDate = new Date(currentYear, currentMonth, dayNumber);
+
+  // Check if the date is valid (e.g., Feb 30 would become Mar 2)
+  if (targetDate.getMonth() !== currentMonth) {
+    return {
+      date: null,
+      dateObj: null,
+      isValid: false,
+      reason: 'invalid_day_for_month',
+      message: `Day ${dayNumber} does not exist in current month`
+    };
+  }
+
   // Format as DD/MM/YYYY (Brazilian format)
   return {
     date: format(targetDate, 'dd/MM/yyyy'),
     dateObj: targetDate,
+    dayNumber: dayNumber,
     isValid: true
   };
 }
 
-export function validateProcedureDate(dateInfo, runDate = new Date()) {
+export function validateProcedureDate(dateInfo, emulateDate = null) {
+  if (!dateInfo || !dateInfo.dateObj) {
+    return {
+      ...dateInfo,
+      isValid: false,
+      reason: 'invalid_date',
+      message: 'Invalid date information'
+    };
+  }
+
   const { dateObj } = dateInfo;
-  const runDay = runDate.getDay();
+
+  // Use emulated date if provided, otherwise use current date
+  let runDate = new Date();
+  if (emulateDate) {
+    // Parse emulateDate string (format: "YYYY-MM-DD")
+    const [year, month, day] = emulateDate.split('-').map(num => parseInt(num));
+    runDate = new Date(year, month - 1, day); // month is 0-indexed
+  }
+
   const runMonth = runDate.getMonth();
   const runYear = runDate.getFullYear();
   const targetMonth = dateObj.getMonth();
   const targetYear = dateObj.getFullYear();
-  
-  // Check if date is from a previous month (but allow dates from current month even if in past)
-  if (targetYear < runYear || (targetYear === runYear && targetMonth < runMonth)) {
+
+  // Only allow dates from the current month
+  if (targetYear !== runYear || targetMonth !== runMonth) {
     return {
       ...dateInfo,
       isValid: false,
-      reason: 'past_month',
-      message: `Cannot fill date from previous month: ${dateInfo.date}`
+      reason: 'wrong_month',
+      message: `Date must be in current month (${format(runDate, 'MM/yyyy')}): ${dateInfo.date}`
     };
   }
-  
-  // Check if date is in the future month
-  if (targetYear > runYear || (targetYear === runYear && targetMonth > runMonth)) {
-    return {
-      ...dateInfo,
-      isValid: false,
-      reason: 'future_month',
-      message: `Cannot fill date from future month: ${dateInfo.date}`
-    };
-  }
-  
-  // For Sunday runs, we're processing the previous week, so all dates from that week are valid
-  if (runDay === 0) {
-    // Sunday - processing previous week, all weekdays are valid
-    return dateInfo;
-  }
-  
-  // For weekday runs (Monday-Saturday), check if date is in the future
-  // Set time to beginning of day for proper date comparison
-  const todayStart = new Date(runDate);
-  todayStart.setHours(0, 0, 0, 0);
-  const targetStart = new Date(dateObj);
-  targetStart.setHours(0, 0, 0, 0);
-  
-  if (targetStart > todayStart) {
-    return {
-      ...dateInfo,
-      isValid: false,
-      reason: 'future_date',
-      message: `Cannot fill future date: ${dateInfo.date}`
-    };
-  }
-  
+
   return dateInfo;
 }
 

@@ -75,48 +75,27 @@ function formatCPF(cpf) {
   return cleaned;
 }
 
-function parseWeekdays(daysString) {
+function parseMonthlyDays(daysString) {
   if (!daysString) return [];
-  
-  const dayMap = {
-    'segunda': 'monday',
-    'segunda-feira': 'monday',
-    'segunda feira': 'monday',
-    'segunta': 'monday',
-    'terça': 'tuesday',
-    'terca': 'tuesday',
-    'terça-feira': 'tuesday',
-    'terça feira': 'tuesday',
-    'quarta': 'wednesday',
-    'quarta-feira': 'wednesday',
-    'quarta feira': 'wednesday',
-    'quinta': 'thursday',
-    'quinta-feira': 'thursday',
-    'quinta feira': 'thursday',
-    'sexta': 'friday',
-    'sexta-feira': 'friday',
-    'sexta feira': 'friday',
-    'sábado': 'saturday',
-    'sabado': 'saturday',
-    'domingo': 'sunday'
-  };
-  
-  const normalizedString = daysString.toLowerCase()
-    .replace(/\s+e\s+/g, ',')
-    .replace(/,\s+/g, ',')
-    .replace(/\s+/g, ' ');
-  
+
+  const normalizedString = daysString
+    .replace(/\s+/g, '') // Remove all whitespace
+    .replace(/[^\d,]/g, ''); // Keep only digits and commas
+
+  if (!normalizedString) return [];
+
   const days = normalizedString.split(',');
-  const weekdays = [];
-  
+  const monthlyDays = [];
+
   for (const day of days) {
-    const trimmedDay = day.trim();
-    if (dayMap[trimmedDay]) {
-      weekdays.push(dayMap[trimmedDay]);
+    const dayNum = parseInt(day.trim(), 10);
+    if (!isNaN(dayNum) && dayNum >= 1 && dayNum <= 31) {
+      monthlyDays.push(dayNum);
     }
   }
-  
-  return weekdays;
+
+  // Sort and remove duplicates
+  return [...new Set(monthlyDays)].sort((a, b) => a - b);
 }
 
 function convertCSVToJSON(csvFilePath, outputPath, professional = 'flavia manuela boeira') {
@@ -137,10 +116,10 @@ function convertCSVToJSON(csvFilePath, outputPath, professional = 'flavia manuel
           nomeDaMae: row['nome da mae'] ? row['nome da mae'].trim() : null,
           nomeDoTitular: row['nome do titular'] ? row['nome do titular'].trim() : null,
           idade: calculateAge(row.nascimento),
-          weekdays: parseWeekdays(row['Dias de atendimento']),
+          monthlyDays: parseMonthlyDays(row['Dias de lançamento']),
           professional: professional
         };
-        
+
         return patient;
       });
     
@@ -215,4 +194,4 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }
 
-export { convertCSVToJSON, parseCSV, calculateAge, formatCPF, parseWeekdays };
+export { convertCSVToJSON, parseCSV, calculateAge, formatCPF, parseMonthlyDays };

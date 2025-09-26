@@ -4,7 +4,7 @@ import { PatientManager } from "./patients.js";
 import { logger } from "./logger.js";
 import { LiveSummaryLogger } from "./liveSummaryLogger.js";
 import {
-  getCurrentWeekDate,
+  getMonthlyDate,
   validateProcedureDate,
   waitWithTimeout,
   clickAndWait,
@@ -105,9 +105,9 @@ class UnimedAutomation {
     logger.info("Login completed successfully");
   }
 
-  async processPatientWeekday(patient, weekday, patientIndex) {
-    logger.info(`Processing patient: ${patient.nome} - ${weekday}`);
-    this.liveSummary.startPatient(patient, weekday);
+  async processPatientMonthlyDay(patient, monthlyDay, patientIndex) {
+    logger.info(`Processing patient: ${patient.nome} - Day ${monthlyDay}`);
+    this.liveSummary.startPatient(patient, monthlyDay);
 
     try {
       // Step 1: Navigate to Checkin and Click "Register Without Card"
@@ -281,12 +281,12 @@ class UnimedAutomation {
 
       // Step 9: Fill Date for Procedure
       logger.info("Step 9: Filling procedure date");
-      const dateInfo = getCurrentWeekDate(weekday);
-      const validatedDate = validateProcedureDate(dateInfo);
+      const dateInfo = getMonthlyDate(monthlyDay, config.emulateDate);
+      const validatedDate = validateProcedureDate(dateInfo, config.emulateDate);
 
       if (!validatedDate.isValid) {
         logger.warn(`Skipping procedure: ${validatedDate.message}`);
-        this.liveSummary.skipPatient(patient, weekday, validatedDate.message);
+        this.liveSummary.skipPatient(patient, monthlyDay, validatedDate.message);
         return; // Skip this procedure
       }
       
@@ -600,6 +600,12 @@ class UnimedAutomation {
 
   async run() {
     try {
+      // Log if using emulated date
+      if (config.emulateDate) {
+        logger.info(`📅 Using EMULATED DATE: ${config.emulateDate}`);
+        logger.info(`This will process the week as if running on ${config.emulateDate}`);
+      }
+      
       await this.initialize();
       await this.login();
 
@@ -611,7 +617,7 @@ class UnimedAutomation {
       // Calculate total procedures to process
       let totalProcedures = 0;
       patients.forEach((patient) => {
-        totalProcedures += patient.weekdays ? patient.weekdays.length : 0;
+        totalProcedures += patient.monthlyDays ? patient.monthlyDays.length : 0;
       });
 
       logger.info(
@@ -622,30 +628,30 @@ class UnimedAutomation {
       for (let i = 0; i < patients.length; i++) {
         const patient = patients[i];
 
-        // Process each weekday for this patient
-        if (patient.weekdays && patient.weekdays.length > 0) {
-          for (const weekday of patient.weekdays) {
+        // Process each monthly day for this patient
+        if (patient.monthlyDays && patient.monthlyDays.length > 0) {
+          for (const monthlyDay of patient.monthlyDays) {
             try {
-              // Check if this weekday should be processed
-              const dateInfo = getCurrentWeekDate(weekday);
-              const validatedDate = validateProcedureDate(dateInfo);
+              // Check if this monthly day should be processed
+              const dateInfo = getMonthlyDate(monthlyDay, config.emulateDate);
+              const validatedDate = validateProcedureDate(dateInfo, config.emulateDate);
 
               if (!validatedDate.isValid) {
-                this.liveSummary.skipPatient(patient, weekday, validatedDate.message);
+                this.liveSummary.skipPatient(patient, monthlyDay, validatedDate.message);
                 logger.info(
-                  `Skipping ${patient.nome} - ${weekday}: ${validatedDate.message}`
+                  `Skipping ${patient.nome} - Day ${monthlyDay}: ${validatedDate.message}`
                 );
                 continue;
               }
 
               await retry(
-                () => this.processPatientWeekday(patient, weekday, i),
+                () => this.processPatientMonthlyDay(patient, monthlyDay, i),
                 config.browser.retryAttempts,
                 5000
               );
             } catch (error) {
               logger.error(
-                `Failed to process patient ${patient.nome} - ${weekday} after ${config.browser.retryAttempts} attempts`
+                `Failed to process patient ${patient.nome} - Day ${monthlyDay} after ${config.browser.retryAttempts} attempts`
               );
             }
 
@@ -653,7 +659,7 @@ class UnimedAutomation {
             await delay(2000);
           }
         } else {
-          logger.warn(`Patient ${patient.nome} has no weekdays configured`);
+          logger.warn(`Patient ${patient.nome} has no monthly days configured`);
         }
       }
     } catch (error) {
